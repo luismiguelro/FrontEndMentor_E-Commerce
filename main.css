@@ -395,6 +395,9 @@ body {
   opacity: 0.5;
 }
 
+.modal-gallery {
+  width: 550px;
+}
 .modal-gallery__background {
   background-color: hsla(0deg, 0%, 0%, 0.5);
   position: absolute;
@@ -405,6 +408,78 @@ body {
   z-index: 1;
   display: none;
   overflow: hidden;
+  display: none;
+  place-content: center;
+}
+.modal-gallery__close-container {
+  text-align: right;
+  height: 30px;
+}
+.modal-gallery__close {
+  width: 16px;
+}
+.modal-gallery__close:hover {
+  cursor: pointer;
+  content: url("../images/icon-close-orange.svg");
+}
+.modal-gallery__image-container {
+  background-image: url("../images/image-product-1.jpg");
+  height: 446px;
+  background-size: cover;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.modal-gallery__thumnails {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+  width: 450px;
+  margin: auto;
+}
+.modal-gallery__thumnail {
+  width: 90px;
+  border-radius: 16px;
+}
+.modal-gallery__thumnail:hover {
+  cursor: pointer;
+  border: 2px solid hsl(26deg, 100%, 55%);
+}
+.modal-gallery__previus {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 190px;
+  left: -15px;
+}
+.modal-gallery__previus:hover {
+  cursor: pointer;
+}
+@media (min-width: 1115px) {
+  .modal-gallery__previus {
+    display: block;
+  }
+}
+.modal-gallery__next {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 190px;
+  left: 525px;
+}
+.modal-gallery__next:hover {
+  cursor: pointer;
+}
+@media (min-width: 1115px) {
+  .modal-gallery__next {
+    display: block;
+  }
 }
 
 .main-container {

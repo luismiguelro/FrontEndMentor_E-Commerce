@@ -63,6 +63,27 @@ function deleteProduct(){
 });
 }
 
+// Cambiar imagenes al presionar los botos flecha
+const imageContainer= document.querySelector('.gallery__image-container');
+const previusGalleryBtn= document.querySelector('.gallery__previus');
+const nextGalleryBtn= document.querySelector('.gallery__next');
+let imgIndex=1;
+
+const imagesUrl =[
+    '../images/image-product-1.jpg',
+    '../images/image-product-2.jpg',
+    '../images/image-product-3.jpg',
+    '../images/image-product-4.jpg',
+
+];
+
+nextGalleryBtn.addEventListener('click',()=>{
+    changeNextImage(imageContainer);
+});
+previusGalleryBtn.addEventListener('click',()=>{
+    changePreviusImage(imageContainer);
+});
+
 
 //Funciones
 function drawProductInModal(){
@@ -79,7 +100,25 @@ function drawProductInModal(){
         <button class="cart-modal__chekount">Checkout</button>
       </div>
         `
-        deleteProduct();
+    deleteProduct();
+}
+
+function changeNextImage(imgContainer){
+    if(imgIndex==4){
+        imgIndex=1;
+    } else{
+        imgIndex++;
+    }
+    imgContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`;  
+}
+
+function changePreviusImage(imgContainer){
+    if(imgIndex==1){
+        imgIndex=4;
+    } else{
+        imgIndex--;
+    }
+    imgContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`;  
 }
 
 

@@ -8,8 +8,6 @@
        
         @include mixins.modal-background;
         display: none;
-       
-        //display: grid;
         place-content: center;
     }
     &__close-container{
@@ -36,7 +34,6 @@
     &__thumnails{
             display: flex;
             justify-content: space-between;
-            border: 2px solid red;
             width: 450px;
             //centrar
             margin: auto;

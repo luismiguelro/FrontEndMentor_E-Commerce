@@ -26,7 +26,7 @@ minusBtn.addEventListener('click',()=>{
 //agregar total productos al carrito al presionar add to cart
 const addToCartBtn = document.querySelector('.details__button');
 let cartNotification = document.querySelector('.header__cart--notification');
-let lastValue;
+let lastValue=0;
 
 addToCartBtn.addEventListener('click',()=>{
     lastValue = parseInt(cartNotification.innerText)+userInputNumber;
@@ -45,7 +45,9 @@ let priceModal = document.querySelector('.cart-modal__price');
 cartIconBtn.addEventListener('click',()=>{
     //cartModal.style.display='block';
     cartModal.classList.toggle('show');
-    if(lastValue==o){
+    if(lastValue==0){
+        productContainer.innerHTML=`<p class="cart-empty">Your cart is empty</p>`;
+    } else{
         drawProductInModal();
     }
    
@@ -69,13 +71,7 @@ const previusGalleryBtn= document.querySelector('.gallery__previus');
 const nextGalleryBtn= document.querySelector('.gallery__next');
 let imgIndex=1;
 
-const imagesUrl =[
-    '../images/image-product-1.jpg',
-    '../images/image-product-2.jpg',
-    '../images/image-product-3.jpg',
-    '../images/image-product-4.jpg',
 
-];
 
 nextGalleryBtn.addEventListener('click',()=>{
     changeNextImage(imageContainer);
@@ -83,6 +79,20 @@ nextGalleryBtn.addEventListener('click',()=>{
 previusGalleryBtn.addEventListener('click',()=>{
     changePreviusImage(imageContainer);
 });
+
+// mostrar y cerrar modal de imagenes, al momento de dar click en la imagen principal *
+const imagesModal = document.querySelector('.modal-gallery__background');
+const closeModalBtn = document.querySelector('.modal-gallery__close');
+
+imageContainer.addEventListener('click',()=>{
+    imagesModal.style.display='grid';
+
+});
+
+closeModalBtn.addEventListener('click',()=>{
+    imagesModal.style.display='none';
+});
+
 
 
 //Funciones
@@ -103,6 +113,9 @@ function drawProductInModal(){
     deleteProduct();
 }
 
+
+
+
 function changeNextImage(imgContainer){
     if(imgIndex==4){
         imgIndex=1;
@@ -120,5 +133,7 @@ function changePreviusImage(imgContainer){
     }
     imgContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`;  
 }
+
+
 
 

@@ -433,7 +433,6 @@ body {
 .modal-gallery__thumnails {
   display: flex;
   justify-content: space-between;
-  border: 2px solid red;
   width: 450px;
   margin: auto;
 }

@@ -85,12 +85,68 @@ const imagesModal = document.querySelector('.modal-gallery__background');
 const closeModalBtn = document.querySelector('.modal-gallery__close');
 
 imageContainer.addEventListener('click',()=>{
-    imagesModal.style.display='grid';
+    if(window.innerWidth >= 1115){
+        imagesModal.style.display = 'grid';
+    }
+    
 
 });
 
 closeModalBtn.addEventListener('click',()=>{
     imagesModal.style.display='none';
+});
+
+//cambiar las imagenes principales desde los thumbnails
+let thumbnails = document.querySelectorAll('.gallery__thumnails');
+thumbnails = [...thumbnails];
+
+thumbnails.forEach(thumbnail =>{
+    thumbnail.addEventListener('click',event=>{
+       imageContainer.style.backgroundImage = `url('../images/image-product-${event.target.id}.jpg')`; 
+    });
+});
+
+//cambiar las imagenes principales desde los thumbnails en el MODAL
+let modalThumbnails = document.querySelectorAll('.modal-gallery__thumnails');
+const modalImageContainer = document.querySelector('.modal-gallery__image-container');
+modalThumbnails=[...modalThumbnails];
+
+
+modalThumbnails.forEach(modalThumbnail=>{
+    modalThumbnail.addEventListener('click',event=>{
+        //quitar la m del id
+        //console.log(event.target.id.slice(-1));
+        modalImageContainer.style.backgroundImage = `url('../images/image-product-${event.target.id.slice(-1)}.jpg')`;
+
+    });
+});
+
+// cambiar imagen principal desde las flechas del modal 
+const btnPreviusModal = document.querySelector('.modal-gallery__previus');
+const btnNextModal = document.querySelector('.modal-gallery__next');
+
+btnNextModal.addEventListener('click',()=>{
+    changeNextImage(modalImageContainer);
+});
+
+btnPreviusModal.addEventListener('click',()=>{
+    changePreviusImage(modalImageContainer);
+});
+
+//mostrar navbar del menu hamburguesa
+const hamburgerMenu = document.querySelector('.header__menu');
+const modalNavbar = document.querySelector('.modal-navbar__background');
+const closeModalNavbar = document.querySelector('.modal-navbar__close-icon');
+
+modalNavbar.style.display = 'none'
+
+hamburgerMenu.addEventListener('click', ()=>{
+    console.log('abrir modal');
+    modalNavbar.style.display = 'block';
+});
+
+closeModalNavbar.addEventListener('click', ()=>{
+    modalNavbar.style.display = 'none';
 });
 
 
@@ -116,22 +172,22 @@ function drawProductInModal(){
 
 
 
-function changeNextImage(imgContainer){
+function changeNextImage(imageContainer){
     if(imgIndex==4){
         imgIndex=1;
     } else{
         imgIndex++;
     }
-    imgContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`;  
+    imageContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`;  
 }
 
-function changePreviusImage(imgContainer){
+function changePreviusImage(imageContainer){
     if(imgIndex==1){
         imgIndex=4;
     } else{
         imgIndex--;
     }
-    imgContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`;  
+    imageContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`;  
 }
 
 

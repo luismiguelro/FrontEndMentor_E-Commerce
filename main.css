@@ -116,7 +116,6 @@ body {
   width: 250px;
   height: 100vh;
   padding: 28px 24px;
-  display: none;
 }
 .modal-navbar__background {
   background-color: hsla(0deg, 0%, 0%, 0.5);
@@ -408,7 +407,6 @@ body {
   z-index: 1;
   display: none;
   overflow: hidden;
-  display: none;
   place-content: center;
 }
 .modal-gallery__close-container {

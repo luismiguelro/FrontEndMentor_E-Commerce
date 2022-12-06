@@ -7,7 +7,7 @@
     &__background{
        
         @include mixins.modal-background;
-        display: none;
+       
         place-content: center;
     }
     &__close-container{

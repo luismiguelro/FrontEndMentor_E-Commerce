@@ -102,7 +102,7 @@ thumbnails = [...thumbnails];
 
 thumbnails.forEach(thumbnail =>{
     thumbnail.addEventListener('click',event=>{
-       imageContainer.style.backgroundImage = `url('../images/image-product-${event.target.id}.jpg')`; 
+       imageContainer.style.backgroundImage = `url('./images/image-product-${event.target.id}.jpg')`; 
     });
 });
 
@@ -116,7 +116,7 @@ modalThumbnails.forEach(modalThumbnail=>{
     modalThumbnail.addEventListener('click',event=>{
         //quitar la m del id
         //console.log(event.target.id.slice(-1));
-        modalImageContainer.style.backgroundImage = `url('../images/image-product-${event.target.id.slice(-1)}.jpg')`;
+        modalImageContainer.style.backgroundImage = `url('./images/image-product-${event.target.id.slice(-1)}.jpg')`;
 
     });
 });
@@ -178,7 +178,7 @@ function changeNextImage(imageContainer){
     } else{
         imgIndex++;
     }
-    imageContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`;  
+    imageContainer.style.backgroundImage = `url('./images/image-product-${imgIndex}.jpg')`;  
 }
 
 function changePreviusImage(imageContainer){
@@ -187,7 +187,7 @@ function changePreviusImage(imageContainer){
     } else{
         imgIndex--;
     }
-    imageContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`;  
+    imageContainer.style.backgroundImage = `url('./images/image-product-${imgIndex}.jpg')`;  
 }
 
 

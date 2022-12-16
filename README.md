@@ -1,12 +1,49 @@
 
-#### CHALLENGE E-COMMERCE
-Challenge taken from Frontend Mentor, and made with HTML, SCSS and JS.
-![](./screenshot.jpg)
-#### Desktop View
-![bognvsqd34ueowkompeh](https://user-images.githubusercontent.com/101124184/204808720-5a010c75-cdf3-4513-b1c3-88b264c93429.jpg)
-#### Mobile View
+# Frontend Mentor - E-commerce product page solution
 
-![mobile-design](https://user-images.githubusercontent.com/101124184/206578865-129ac60c-1093-41cd-b578-f77b94dd90e3.jpg)
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+-   [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+-   View the optimal layout for the site depending on their device's screen size
+-   See hover states for all interactive elements on the page
+-   Open a lightbox gallery by clicking on the large product image
+-   Switch the large product image by clicking on the small thumbnail images
+-   Add items to the cart
+-   View the cart and remove items from it
+
+### Screenshot
+
+![](./images/desktop.png)
+![](./images/mobile.png)
+![](./images/mobile-menu.png)
+
+### Links
+
+-   Solution URL: [see code](https://github.com/luismiguelrodriguez3/challenge-ecommerce)
+-   Live Site URL: [live site](https://luismiguelrodriguez3.github.io/challenge-ecommerce/)
+
+## My process
+
+### Built with
+
+-   Semantic HTML5 markup
+-   SCSS custom properties
+-   Mobile-first workflow
 
 ## Author
 

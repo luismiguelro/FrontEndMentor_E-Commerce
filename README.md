@@ -30,7 +30,9 @@ Users should be able to:
 Desktop design
 ![desktop-design](https://user-images.githubusercontent.com/101124184/208186083-bb04a2c0-41bc-4ad2-bb64-8cdf5becf723.jpg)
 ![desktop-design-lightbox](https://user-images.githubusercontent.com/101124184/208186098-38c294fb-aeba-44f0-8ace-eecaa9d2ad8a.jpg)
+
 Mobile design
+
 ![mobile-design](https://user-images.githubusercontent.com/101124184/208186115-59ea4500-64bf-4c1b-91b0-df2778a0dfcf.jpg)
 ![mobile-menu](https://user-images.githubusercontent.com/101124184/208186211-2610ea68-8899-43ac-9914-766250dc131f.jpg)
 

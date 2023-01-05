@@ -40,7 +40,7 @@ Mobile design
 ### Links
 
 -   Solution URL: [see code](https://github.com/luismiguelrodriguez3/challenge-ecommerce)
--   Live Site URL: [live site](https://luismiguelrodriguez3.github.io/challenge-ecommerce/)
+-   Live Site URL: [live site](https://frontendmentor-e-commerce.netlify.app/)
 
 ## My process
 
